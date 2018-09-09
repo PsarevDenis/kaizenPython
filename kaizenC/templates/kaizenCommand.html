@@ -1,0 +1,47 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<form class="col-12 form-container" action="/problem/p/" method="POST">
+    <div class="form-group">
+        <label for="department">Производство, цех</label>
+        <select class="form-control form-control-input" id="department" name="department">
+            {% for dep in deps%}
+            <option>{{dep[0]}}</option>
+            {% endfor %}
+        </select>
+
+    </div>
+    <div class="form-group">
+        <label for="inputProjectName">Название проекта</label>
+        <input type="text" class="form-control form-control-input" name="inputProjectName" id="inputProjectName" placeholder="Сформулируйте тему для работы команды">
+    </div>
+    <div class="form-group">
+        <label for="inputProjectName">Заказчик</label>
+        <input type="text" class="form-control form-control-input" name="zakaz" id="zakaz" placeholder="ФИО">
+    </div>
+    <div class="form-group">
+        <label for="inputProjectName">Лидер</label>
+        <input type="text" class="form-control form-control-input" name="lider" id="lider" placeholder="ФИО">
+    </div>
+    <div class="form-group">
+        <label for="inputProjectName">Цель Кайдзен команды</label>
+        <textarea class="form-control" rows="5" name="comment" id="comment" placeholder="Сформулируйте цель"></textarea>
+
+    </div>
+    <div class="form-group dynamic-stuff">
+        <label for="inputProjectName">Участники</label>
+        <input type="text" class="form-control dynamic-element form-control-input" name="uchastnik" id="uchastnik" placeholder="ФИО, max 12">
+
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="add-one">+ Добавить участника</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="control-button" name="submit" value="problem">Далее</button>
+    </div>
+</form>
+{% endblock %}

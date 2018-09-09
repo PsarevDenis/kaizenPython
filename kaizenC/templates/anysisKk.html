@@ -1,0 +1,26 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="col-12 form-container">
+
+    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Цель</th>
+                <th>Отметка о выполнении</th>
+                <th>Комментарий</th>
+            </tr>
+        </thead>
+    </table>
+    </br>
+
+    <div class="form-group">
+        <label for="inputProjectName">Кайдзен команда проведена</label>
+        <input type="checkbox" class="form-control" id="realizЛЛ">
+    </div>
+
+    <div class="form-group">
+        <input type="button" class="control-button" value="Сформировать отчет">
+    </div>
+
+</div>
+{% endblock %}

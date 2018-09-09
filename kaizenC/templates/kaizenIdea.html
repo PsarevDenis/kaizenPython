@@ -1,0 +1,33 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<form class="col-12 form-container" action="/workWithEvent/e/" method="POST">
+
+    <table id="ideaTable" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Цель</th>
+                <th>Мера</th>
+                <th>Результат</th>
+                <th>Срок</th>
+            </tr>
+        </thead>
+    </table>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" name="submit" class="control-button" value="addIdea">Поставить цель</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" name="submit" class="control-button" value="kaizenEvent">Далее</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+{% endblock %}

@@ -1,0 +1,20 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<div class="col-12 center-alegn">
+    <div class="main-menu">
+        <form action="/kaizenCommand/0/" method="POST">
+            <button class="control-button" type="submit">Начать работу</button>
+        </form>
+        <form action="/problem/0/" method="POST">
+            <button class="control-button">Просмотр проблем</button>
+        </form>
+        <form action="/workWithEvent/0/" method="POST">
+            <button class="control-button">Работа с мероприятиями</button>
+        </form>
+        <form action="/anysisKk/0/" method="POST">
+            <button class="control-button">Просмотр завершенных Кайдзен команд</button>
+        </form>
+
+    </div>
+</div>
+{% endblock %}
